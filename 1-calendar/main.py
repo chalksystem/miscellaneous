@@ -67,11 +67,10 @@ class calendar:
 
         self.days = monthIndexList
 
-    def getCalendar(self, dayOneIndex = {}, startDay=None, calendar = []):
+    def getCalendar(self, dayOneIndex = {}, startDay=None):
 
         self.dayOneIndex = dayOneIndex
         self.startDay = startDay = self.dayTracker
-        self.calendar = calendar
 
         weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 
