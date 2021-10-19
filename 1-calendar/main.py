@@ -2,13 +2,12 @@
 
 class calendar:
 
-    def __init__(self, year, control=2020, dayTracker=None, calendarYear=None):
+    def __init__(self, year, control=2020, dayTracker=None):
 
 
         self.year = year 
         self.control = control
         self.dayTracker = dayTracker = self.control
-        self.calendarYear = calendarYear
 
         if year >= control:
             for i in range(control, year):
@@ -19,7 +18,9 @@ class calendar:
 
         else:
             while year < control:
-                control -= 28    
+                control -= 28
+                # self.control = control
+                # return    
             for i in range(control, year):
                     if i%4 == 0:
                         dayTracker += 366
@@ -124,6 +125,7 @@ class calendar:
             dayList.pop(0)
         self.dayOneIndex = dayOneIndex
 
-#a = calendar(2020)
-#a.getDays()
-#a.getCalendar()
+
+# thisYear = calendar(2021)
+# thisYear.getDays()
+# thisYear.getCalendar()

@@ -1,25 +1,30 @@
 # 1-calendar
 
 Status:
-Incomplete
+Complete (Virtually)
 
 Type:
-Function
+Class
 
 Description:
-A function that helps orient the first day of a calendar month and structures the rest of the month accordingly. 
+A class that returns a full calendar for any specified year. 
 
 Details:
-This function does not account for the change in days in other months and uses only 31 days. This is why the status is "Incomplete". I will consider it complete once the function can account for the change in days depending on the month, year, and if it is a leap year.
-
-Currently, ```startDay``` is the first day of the month ranging from 1 to 7 with 1 being a Sunday and 7 being a Saturday.
-
-For example:
+When initializing the class, the only input required is the desired calendar year. For example (using ipython):
 
 ```
-$ calendar(6)
+In [1]: from main import calendar                                             
 
-        January
+In [2]: thisYear = calendar(2021)                                             
+
+In [3]: thisYear.getDays()                                                    
+
+In [4]: thisYear.getCalendar()                                                
+
+
+        January 
+
+ S  M  T  W  T  F  S 
 
                 1  2 
 
@@ -31,11 +36,104 @@ $ calendar(6)
 
 24 25 26 27 28 29 30 
 
-31
+31 
 
-$ calendar(1)
 
-        January
+       February 
+
+ S  M  T  W  T  F  S 
+
+    1  2  3  4  5  6 
+
+ 7  8  9 10 11 12 13 
+
+14 15 16 17 18 19 20 
+
+21 22 23 24 25 26 27 
+
+28 
+
+
+          March 
+
+ S  M  T  W  T  F  S 
+
+    1  2  3  4  5  6 
+
+ 7  8  9 10 11 12 13 
+
+14 15 16 17 18 19 20 
+
+21 22 23 24 25 26 27 
+
+28 29 30 31 
+
+
+          April 
+
+ S  M  T  W  T  F  S 
+
+             1  2  3 
+
+ 4  5  6  7  8  9 10 
+
+11 12 13 14 15 16 17 
+
+18 19 20 21 22 23 24 
+
+25 26 27 28 29 30 
+
+
+            May 
+
+ S  M  T  W  T  F  S 
+
+                   1 
+
+ 2  3  4  5  6  7  8 
+
+ 9 10 11 12 13 14 15 
+
+16 17 18 19 20 21 22 
+
+23 24 25 26 27 28 29 
+
+30 31 
+
+
+           June 
+
+ S  M  T  W  T  F  S 
+
+       1  2  3  4  5 
+
+ 6  7  8  9 10 11 12 
+
+13 14 15 16 17 18 19 
+
+20 21 22 23 24 25 26 
+
+27 28 29 30 
+
+
+           July 
+
+ S  M  T  W  T  F  S 
+
+             1  2  3 
+
+ 4  5  6  7  8  9 10 
+
+11 12 13 14 15 16 17 
+
+18 19 20 21 22 23 24 
+
+25 26 27 28 29 30 31 
+
+
+         August 
+
+ S  M  T  W  T  F  S 
 
  1  2  3  4  5  6  7 
 
@@ -47,4 +145,67 @@ $ calendar(1)
 
 29 30 31 
 
+
+      September 
+
+ S  M  T  W  T  F  S 
+
+          1  2  3  4 
+
+ 5  6  7  8  9 10 11 
+
+12 13 14 15 16 17 18 
+
+19 20 21 22 23 24 25 
+
+26 27 28 29 30 
+
+
+        October 
+
+ S  M  T  W  T  F  S 
+
+                1  2 
+
+ 3  4  5  6  7  8  9 
+
+10 11 12 13 14 15 16 
+
+17 18 19 20 21 22 23 
+
+24 25 26 27 28 29 30 
+
+31 
+
+
+       November 
+
+ S  M  T  W  T  F  S 
+
+    1  2  3  4  5  6 
+
+ 7  8  9 10 11 12 13 
+
+14 15 16 17 18 19 20 
+
+21 22 23 24 25 26 27 
+
+28 29 30 
+
+
+       December 
+
+ S  M  T  W  T  F  S 
+
+          1  2  3  4 
+
+ 5  6  7  8  9 10 11 
+
+12 13 14 15 16 17 18 
+
+19 20 21 22 23 24 25 
+
+26 27 28 29 30 31 
+
 ```
+
